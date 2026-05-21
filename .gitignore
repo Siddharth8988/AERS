@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+
+# ChromaDB
+chroma_db/
+
+# Documents
+documents/
+
+# Logs
+logs/
+
+# Streamlit secrets
+.streamlit/secrets.toml
+
+# IDE
+.vscode/
+.idea/
+
+# Environment files
+.env
+*.env
+
+# Temporary files
+tmp/
+temp/
+
+# OCR images
+*.png
+*.jpg
+*.jpeg
+
+# PDFs
+*.pdf
+
+# Build files
+build/
+dist/
+*.egg-info/
+
+# Notebook checkpoints
+.ipynb_checkpoints/
