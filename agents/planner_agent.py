@@ -3,13 +3,13 @@ class PlannerAgent:
         self.llm = llm
 
     def route_query(self, query):
-        prompt = f"""
-        Analyze the user query: "{query}"
-        Classify it into one of two categories:
-        1. 'SEARCH': The user is asking about technical content, syllabus, or specific data.
-        2. 'GREET': The user is saying hello, asking how you are, or small talk.
-        
-        Return ONLY the word 'SEARCH' or 'GREET'.
-        """
+        prompt = f"""You must reply with exactly one word only.
+If the input is a greeting or small talk, reply: GREET
+If the input is a question about any topic, reply: SEARCH
+
+Input: "{query}"
+Reply:"""
         decision = self.llm.invoke(prompt).strip().upper()
-        return "SEARCH" if "SEARCH" in decision else "GREET"
+        # Extract first word only in case Qwen adds explanation
+        first_word = decision.split()[0] if decision else "SEARCH"
+        return "SEARCH" if "SEARCH" in first_word else "GREET"
