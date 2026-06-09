@@ -199,6 +199,12 @@ AERS/
 ```
 
 ---
+## Pre-Installation Checklist
+
+Before starting, ensure:
+1. Python 3.10+ installed
+2. Git installed
+3. Internet connection for first-time setup
 
 # Installation
 
@@ -217,6 +223,15 @@ cd AERS
 python3 -m venv venv
 source venv/bin/activate
 ```
+
+---
+## 2.5 Create Required Directories
+
+```bash
+mkdir -p documents chroma_db logs config
+```
+
+This ensures ChromaDB and document storage folders exist before the app runs.
 
 ---
 
@@ -249,6 +264,17 @@ ollama pull gemma2:2b
 ```
 
 ---
+## 5.5 Verify Ollama Installation
+
+```bash
+ollama list
+```
+
+You should see:
+- qwen2.5:3b
+- gemma2:2b
+
+If models don't appear, Ollama pull failed. Re-run step 5.
 
 ## 6. Install Python Dependencies
 
