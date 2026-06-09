@@ -206,6 +206,11 @@ Before starting, ensure:
 2. Git installed
 3. Internet connection for first-time setup
 
+#-------***IMPORTANT FOR WINDOWS USERS***-------#
+For Windows Users, i recommend using -WSL2(Windows Subsystem for Linux) for testing this Project.
+The Installation of WSL is simple.
+1.Open Powershell as Admin and type : wsl --install -> Wait for installation to complete -> Restart your PC -> Search for Ubuntu and you are good to go with the installation process.
+
 # Installation
 
 ## 1. Clone Repository
